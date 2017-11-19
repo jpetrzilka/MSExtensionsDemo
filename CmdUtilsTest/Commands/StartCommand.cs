@@ -10,7 +10,7 @@ namespace CmdUtilsTest.Commands
         public string Description => "Starts the system";
 
         public Action<CommandLineApplication> Action =>
-            new Action<CommandLineApplication>(cmd =>
+            cmd =>
             {
                 cmd.Description = Description;
                 cmd.HelpOption("-?|--help");
@@ -32,6 +32,6 @@ namespace CmdUtilsTest.Commands
 
                     return 0;
                 });
-            });
+            };
     }
 }

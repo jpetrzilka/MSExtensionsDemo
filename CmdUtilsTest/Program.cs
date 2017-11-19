@@ -9,8 +9,6 @@ namespace CmdUtilsTest
             var appBuilder = new AppBuilder();
             var app = appBuilder.BuildApp();
             app.Execute(args);
-
-            Console.ReadLine();
         }
     }
 }

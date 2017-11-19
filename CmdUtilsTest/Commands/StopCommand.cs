@@ -10,7 +10,7 @@ namespace CmdUtilsTest.Commands
         public String Description => "Stops the system";
 
         public Action<CommandLineApplication> Action =>
-            new Action<CommandLineApplication>(cmd =>
+            cmd =>
             {
                 cmd.Description = Description;
                 cmd.HelpOption("-?|--help");
@@ -38,6 +38,6 @@ namespace CmdUtilsTest.Commands
 
                     return 0;
                 });
-            });
+            };
     }
 }

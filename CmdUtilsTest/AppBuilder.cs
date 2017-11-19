@@ -14,9 +14,8 @@ namespace CmdUtilsTest
             app.Name = "CB4 shutdown tool";
             app.HelpOption("-?|--help");
             app.VersionOption("-v|--version", $"{app.Name} v1.0.0");
-            
-            RegisterCommand(new StartCommand());
-            RegisterCommand(new StopCommand());
+
+            RegisterCommands();
 
             app.OnExecute(() =>
             {
@@ -26,6 +25,13 @@ namespace CmdUtilsTest
             });
 
             return app;
+        }
+
+        private void RegisterCommands()
+        {
+            RegisterCommand(new StartCommand());
+            RegisterCommand(new StopCommand());
+            RegisterCommand(new SelfDestructCommand());
         }
 
         void RegisterCommand(IConsoleCmd command)

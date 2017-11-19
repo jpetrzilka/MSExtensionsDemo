@@ -1,20 +1,23 @@
-﻿using Microsoft.Extensions.CommandLineUtils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CmdUtilsTest.Commands;
+using Microsoft.Extensions.CommandLineUtils;
 
 namespace CmdUtilsTest
 {
     class AppBuilder
     {
+        CommandLineApplication app;
+
         public CommandLineApplication BuildApp()
         {
-            var app = new CommandLineApplication();
-            var cmdBuilder = new CommandsBuilder();
-            app.Command("start", cmdBuilder.BuildStartCmd());
+            app = new CommandLineApplication();
+            app.HelpOption("-?|--help");
+            RegisterCommand(new StartCommand());
             return app;
+        }
+
+        void RegisterCommand(IConsoleCmd command)
+        {
+            app.Command(command.Name, command.Action);
         }
     }
 }

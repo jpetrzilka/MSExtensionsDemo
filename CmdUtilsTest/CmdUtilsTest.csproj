@@ -46,7 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppBuilder.cs" />
-    <Compile Include="CommandsRepository.cs" />
+    <Compile Include="Commands\StartCommand.cs" />
+    <Compile Include="Commands\IConsoleCmd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,9 +1,4 @@
-﻿using Microsoft.Extensions.CommandLineUtils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace CmdUtilsTest
 {
@@ -14,6 +9,8 @@ namespace CmdUtilsTest
             var appBuilder = new AppBuilder();
             var app = appBuilder.BuildApp();
             app.Execute(args);
+
+            Console.ReadLine();
         }
     }
 }

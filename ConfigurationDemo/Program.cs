@@ -13,22 +13,26 @@ namespace ConfigurationDemo
         public static void Main(string[] args)
         {
             var builder = new ConfigurationBuilder().
-               SetBasePath("Configs").
-               AddJsonFile("jsonsettings.json", optional: false, reloadOnChange: true).
-               AddXmlFile("xmlsettings.json", optional: false, reloadOnChange: false).
-               AddIniFile("inisettings.json", optional: true, reloadOnChange: false).
-               AddEnvironmentVariables().
+               SetBasePath(Path.GetFullPath("Configs")).//must be absolute
+               //AddJsonFile("jsonsettings.json", optional: false, reloadOnChange: true).
+               //AddXmlFile("xmlsettings.json", optional: false, reloadOnChange: false).
+               //AddIniFile("inisettings.json", optional: true, reloadOnChange: false).
+               //AddEnvironmentVariables().
                AddCommandLine(args);
             var configuration = builder.Build();
 
-            var settings = new MySettings();
-            configuration.Bind(settings);
+            //var settings = new MySettings();
+            //configuration.Bind(settings);
 
-            var moduleSettings = new MyModuleSettings();
-            configuration.GetSection("SectionA").Bind(moduleSettings);
+            //var moduleSettings = new MyModuleSettings();
+            //configuration.GetSection("SectionA").Bind(moduleSettings);
 
-            Console.WriteLine($"My application name is '{settings.ApplicationName}'");
-            Console.WriteLine($"My module name is '{moduleSettings.ModuleName}'");
+            //Console.WriteLine($"My application name is '{settings.ApplicationName}'");
+            //Console.WriteLine($"My module name is '{moduleSettings.ModuleName}'");
+
+            //command line
+            Console.WriteLine($"Machine name: {configuration["Profile:MachineName"]}");
+            Console.WriteLine($"Machine name: {configuration["version"]}");
 
             Console.ReadLine();
         }

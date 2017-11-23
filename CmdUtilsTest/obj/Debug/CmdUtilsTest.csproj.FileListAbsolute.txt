@@ -1,9 +1,0 @@
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\bin\Debug\CmdUtilsTest.exe.config
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\bin\Debug\CmdUtilsTest.exe
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\bin\Debug\CmdUtilsTest.pdb
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\bin\Debug\Microsoft.Extensions.CommandLineUtils.dll
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\bin\Debug\Microsoft.Extensions.CommandLineUtils.xml
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\obj\Debug\CmdUtilsTest.csprojResolveAssemblyReference.cache
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\obj\Debug\CmdUtilsTest.csproj.CoreCompileInputs.cache
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\obj\Debug\CmdUtilsTest.exe
-C:\src\private\CmdUtilsTest\CmdUtilsTest\CmdUtilsTest\obj\Debug\CmdUtilsTest.pdb

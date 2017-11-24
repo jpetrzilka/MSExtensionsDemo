@@ -91,8 +91,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyModuleSettings.cs" />
-    <Compile Include="MySettings.cs" />
+    <Compile Include="ConfigObjects\JsonSettings.cs" />
+    <Compile Include="ConfigObjects\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -102,6 +102,12 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Configs\config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Configs\config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Configs\config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

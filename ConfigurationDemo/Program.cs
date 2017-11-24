@@ -15,12 +15,12 @@ namespace ConfigurationDemo
         public static void Main(string[] args)
         {
             var builder = new ConfigurationBuilder().//later source always overrides its predecessor
-               SetBasePath(Path.GetFullPath("Configs")).//must be absolute
-               AddJsonFile("config.json", optional: false, reloadOnChange: true).
-                                                        //AddXmlFile("xmlsettings.json", optional: false, reloadOnChange: false).
+                SetBasePath(Path.GetFullPath("Configs")).//must be absolute
+                AddJsonFile("config.json", optional: false, reloadOnChange: true).
+                AddXmlFile("config.xml", optional: false, reloadOnChange: false).
                                                         //AddIniFile("inisettings.json", optional: true, reloadOnChange: false).
-               AddEnvironmentVariables().
-               AddCommandLine(args);
+                AddEnvironmentVariables().
+                AddCommandLine(args);
             var configuration = builder.Build();
 
             //json settings
@@ -45,6 +45,11 @@ namespace ConfigurationDemo
             Console.WriteLine("{0}: {1}", 
                 jsonData.Users.First().Login, 
                 jsonData.Users.First().Email);
+            Console.WriteLine();
+
+            //xml settings
+            Console.WriteLine("XML settings");
+            Console.WriteLine("useCookies: {0}", configuration["useCookies"]);
             Console.WriteLine();
 
             //env. variables

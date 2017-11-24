@@ -91,7 +91,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigObjects\IniSettings.cs" />
     <Compile Include="ConfigObjects\JsonSettings.cs" />
+    <Compile Include="ConfigObjects\LoggingInfo.cs" />
     <Compile Include="ConfigObjects\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

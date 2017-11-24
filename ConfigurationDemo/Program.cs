@@ -18,7 +18,7 @@ namespace ConfigurationDemo
                 SetBasePath(Path.GetFullPath("Configs")).//must be absolute
                 AddJsonFile("config.json", optional: false, reloadOnChange: true).
                 AddXmlFile("config.xml", optional: false, reloadOnChange: false).
-                                                        //AddIniFile("inisettings.json", optional: true, reloadOnChange: false).
+                AddIniFile("config.ini", optional: true, reloadOnChange: false).
                 AddEnvironmentVariables().
                 AddCommandLine(args);
             var configuration = builder.Build();
@@ -50,6 +50,14 @@ namespace ConfigurationDemo
             //xml settings
             Console.WriteLine("XML settings");
             Console.WriteLine("useCookies: {0}", configuration["useCookies"]);
+            Console.WriteLine();
+
+            //ini settings
+            var iniConfig = new IniSettings();
+            configuration.Bind(iniConfig);
+            Console.WriteLine("INI settings");
+            Console.WriteLine("LoadDataFromRegistry: {0}", iniConfig.LoadDataFromRegistry);
+            Console.WriteLine("Logging.LastLogDate: {0}", iniConfig.Logging.LastLogDate);
             Console.WriteLine();
 
             //env. variables

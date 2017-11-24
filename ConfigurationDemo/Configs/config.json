@@ -1,0 +1,17 @@
+﻿{
+  "maxFailedLogins": 10,
+  "passwordRules": {
+    "lockoutDurationMinutes": 5
+  },
+  "ignorePasswordRules": true,
+    "users": [
+        {
+            "login": "Peter Stano",
+            "email": "donothing@creditinfobarbados.com"
+        },
+      {
+        "login": "Pepa",
+        "email": "TODO_PEPA@cb4.ge"
+      }
+    ]
+}
